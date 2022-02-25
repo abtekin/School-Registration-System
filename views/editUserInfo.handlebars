@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/addStudent.css">
+
+<form class="form-card" method="post" action="/editUser">
+    <fieldset class="form-fieldset">
+        <legend class="form-legend">Editing {{f_name}} {{l_name}} (ID: {{id}})</legend>
+        <div class="form-radio form-radio-inline">
+        <div class="form-checkbox form-checkbox-inline">  
+
+             <input type="hidden" id="custId" name="id" value="{{id}}">
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" value="{{email}}" type="input" required name="email"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Edit Email</label>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" value="{{f_name}}" placeholder="" type="input" required name="f_name"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Edit First Name</label>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" value="{{l_name}}" type="input" required name="l_name"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Edit Last Name</label>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" value="{{number}}" type="input" required name="number"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Edit Phone Number</label>
+        </div>
+        
+    </fieldset>
+    <div class="form-actions">
+        <button class="form-btn" type="submit">Submit</button>
+        <button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+    </div>
+</form>

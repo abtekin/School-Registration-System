@@ -1,0 +1,604 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/ILstyle.css">
+
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      JAJ University
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  {{#if fac}}
+  <div class="nav-links">
+    <form action="/userSearch" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        Search For a User</button></form>
+    <form action="/viewInfo" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View User Info</button></form>
+    <form action="/setGrades" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        Enter Grade</button></form>
+    <form action="/viewClassList" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Class List</button></form>
+    <form action="/viewSchedule" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        Schedule Viewer</button></form>
+    <form action="/facHistory" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View History</button></form>
+    <form action="/transcript" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Transcript</button></form>
+    <form action="/degreeAudit" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        Degree Audit</button></form>
+    <form action="/viewAdvisee" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        Advisee List</button></form>
+    <form action="/viewHolds" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Holds</button></form>
+    <form action="/viewMajorPrograms" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Classes Needed For Major Programs</button></form>
+    <form action="/viewMinorPrograms" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Clases Needed For Minor Programs</button></form>
+    <form action="/showPrereq" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        Look Up Prerequisites</button></form>
+    <form action="/showProgram" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      View Student Major And Major</button></form>
+    <form action="/viewClasses" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Classes Spring 2022</button></form>
+  </div>
+</div>
+{{/if}}
+
+{{#if student}}
+<div class="nav-links">
+  <form action="/viewMyInfo" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View My Info</button></form>
+  <form action="/viewSchedule" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      View Schedule</button></form>
+  <form action="/transcript" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      View Transcript</button></form>
+  <form action="/degreeAudit" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Degree Audit</button></form>
+  <form action="/viewAdvisor" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      View Advisor</button></form>
+  <form action="/viewHolds" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Holds</button></form>
+  <form action="/showPrereq" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Look Up Prerequisites</button></form>
+  <form action="/showProgram" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      View Your Current Major and Minor</button></form>
+  <form action="/changeMajor" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Change Major</button></form>
+  <form action="/changeMinor" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Change Minor</button></form>
+  <form action="/viewMajorPrograms" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Classes Needed For Major Programs</button></form>
+  <form action="/viewMinorPrograms" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Clases Needed For Minor Programs</button></form>
+  <form action="/registration" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Add a Class</button></form>
+  <form action="/dropClass" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Drop a Class</button></form>
+  <form action="/viewClasses" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      View Classes Spring 2022</button></form>
+
+</div>
+</div>
+{{/if}}
+
+{{#if admin}}
+<div class="nav-links">
+  <form action="/userSearch" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        Search For a User</button></form>
+  <form action="/viewInfo" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View User Info</button></form>
+  <form action="/editUser" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        Edit a User's Info</button></form>
+  <form action="/viewSchedule" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Schedule Viewer</button></form>
+  <form action="/transcript" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      View Transcript</button></form>
+  <form action="/degreeAudit" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Degree Audit</button></form>
+  <form action="/viewHolds" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Holds</button></form>
+  <form action="/showPrereq" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Look Up Prerequisites</button></form>
+  <form action="/showProgram" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      View Student Major and Minor</button></form>
+  <form action="/viewMajorPrograms" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Classes For Available Major Programs</button></form>
+  <form action="/viewMinorPrograms" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        View Clases For Available Minor Programs</button></form>
+  <form action="/addCourse" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Add Course</button></form>
+  <form action="/addClass" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Add Section</button></form>
+  <form action="/removeSection" method="get"><button class="btn-link"
+        style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+        Remove Section</button></form>
+  <form action="/editInstructor" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Edit Section</button></form>  
+  <form action="/addStudent" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Add Student</button></form>
+  <form action="/addFaculty" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Add Faculty</button></form>
+  <form action="/addHold" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Add Hold</button></form>
+  <form action="/removeHold" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      Remove Hold</button></form>
+  <form action="/viewClasses" method="get"><button class="btn-link"
+      style="background: none;border: none;padding: 0px;color: #ffffff;font: inherit;cursor: pointer;text-decoration: underline;">
+      View Classes Spring 2022</button></form>
+</div>
+</div>
+{{/if}}
+
+{{#if noClasses}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You are not registered for any classes for the selected semester.
+</div>
+{{/if}}
+
+{{#if noHistory}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  Could not find any records associated with that user
+</div>
+{{/if}}
+
+{{#if alreadyHolds}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  This Student already has this hold on their account
+</div>
+{{/if}}
+
+{{#if cantDA}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  Can't perform degree audit because this student hasn't completed any classes.
+</div>
+{{/if}}
+
+{{#if cantGrade}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You cannot give grades outside of the grading time period.
+</div>
+{{/if}}
+
+{{#if removedHold}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You have removed the {{ht}} hold for student with the ID: {{idd}}
+</div>
+{{/if}}
+
+{{#if registeringFaculty}}
+
+{{#if failedToReg}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You failed to register the faculty member.
+</div>
+
+{{else}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You registered the faculty member with ID: {{uID}}.
+</div>
+{{/if}}
+{{/if}}
+
+{{#if noHist}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  Student does not have enough info to generate a degree audit.
+</div>
+{{/if}}
+
+{{#if cantView}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You can't view this user's schedule.
+</div>
+{{/if}}
+
+{{#if adviseeError}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  Error viewing Advisee's.
+</div>
+{{/if}}
+
+{{#if cantChange}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  Can't change student's grades you are not teaching.
+</div>
+{{/if}}
+
+{{#if hold}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  Can't register due to a hold on your account.
+</div>
+{{/if}}
+
+{{#if tooManyClasses}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  The selected faculty member is already teaching the maximum number of courses.
+</div>
+{{/if}}
+
+{{#if noClassWCRN}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  There are no class with that section number
+</div>
+{{/if}}
+
+{{#if tooMany}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You are currently registered for too many classes to sign up.
+</div>
+{{/if}}
+
+{{#if noUser}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  No User found with that ID.
+</div>
+{{/if}}
+
+{{#if changed}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You successfully changed the grade for student with ID {{swID}}
+</div>
+{{/if}}
+
+{{#if updatedMinor}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You have successfully changed your minor
+</div>
+{{/if}}
+
+{{#if updatedMajor}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You have successfully changed your major
+</div>
+{{/if}}
+
+{{#if editedUser}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You have successfully edited the user with the ID: {{usersID}}
+</div>
+{{/if}}
+
+{{#if timeOverlap}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You cannot have classes at overlapping times.
+</div>
+{{/if}}
+
+{{#if editClass}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You successfully edited this class.
+</div>
+{{/if}}
+
+{{#if failed}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  Last login attempt failed. Please try again.
+</div>
+{{/if}}
+
+{{#if denied}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You are not an Admin.
+</div>
+{{/if}}
+
+{{#if dropSuc}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You successfully dropped the course with the section id: {{secID}}
+</div>
+{{/if}}
+
+{{#if noHolds}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  This user does not have any holds of this type on their account.
+</div>
+{{/if}}
+
+{{#if noPrereq}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  There are no Prerequisites or wrong Course ID.
+</div>
+{{/if}}
+
+{{#if error}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  There was an error. Please try again.
+</div>
+{{/if}}
+
+{{#if filled}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  There are no available seats for this class.
+</div>
+{{/if}}
+
+{{#if noStudents}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  No class lists to view.
+</div>
+{{/if}}
+
+{{#if noStudent}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  There are no students with the entered ID.
+</div>
+{{/if}}
+
+{{#if cantDrop}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  Unable to drop selected class.
+</div>
+{{/if}}
+
+{{#if cantReg}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You are uable to register for classes.
+</div>
+{{/if}}
+
+{{#if regSuc}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You successfully registered for class with ID: {{ClassID}}
+</div>
+{{/if}}
+
+{{#if noClass}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  There are no valid classes with that ID
+</div>
+{{/if}}
+
+{{#if missingP}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You don't have the required prerequisites to take this class.
+</div>
+{{/if}}
+
+{{#if alreadyT}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You are already registered for that class.
+</div>
+{{/if}}
+
+{{#if addedHold}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You added a {{truHold}} hold for student with ID: {{iddd}}
+</div>
+{{/if}}
+
+{{#if addingClass}}
+{{#if failedToAddClass}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You failed to add the class.
+</div>
+
+{{else}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You added the class.
+</div>
+{{/if}}
+{{/if}}
+
+{{#if removingStudent}}
+{{#if failedRemovingStudent}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You failed to remove that student.
+</div>
+
+{{else}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You removed the student.
+</div>
+{{/if}}
+{{/if}}
+
+
+{{#if addingCourse}}
+{{#if failedToAddCourse}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You failed to add the course.
+</div>
+
+{{else}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You added the course.
+</div>
+{{/if}}
+{{/if}}
+
+{{#if removingSection}}
+{{#if failedToRemoveSection}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You failed to remove the course.
+</div>
+
+{{else}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You removed the course.
+</div>
+{{/if}}
+{{/if}}
+
+
+{{#if registering}}
+
+{{#if failedToReg}}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You failed to register the student.
+</div>
+
+{{else}}
+<div class="good">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You registered the student with SID: {{uID}}.
+</div>
+{{/if}}
+{{/if}}
+<div>
+  {{#if loggedIn}}
+  <form action="/logout" method="get">
+    <button id="logoutButton">
+      <h1>Logout</h1>
+    </button>
+  </form>
+  <h1 id="h1o">Welcome Back, {{wholeName}}</h1>
+  <h3 id="h1o">User ID: {{id}}</h3>
+  {{else}}
+  <form action="/login" method="get">
+    <button id="loginButton">
+      <h1>Login</h1>
+    </button>
+  </form>
+  {{/if}}
+
+</div>
+
+
+<div>
+    <h1 id="h1o"> Courses {{semmy}}</h1>
+</div>
+
+<form class="form-inline" action="/masterSched" method="post">
+    <select placeholder=" " type="input"
+      required name="sortBy">
+      <option disabled selected value="NULL">Sort By</option>
+      <option value="1">Course</option>
+      <option value="2">Time</option>
+      <option value="3">Credits</option>
+      <option value="4">Inscructor</option>
+    </select>
+    <select placeholder=" " type="input"
+      required name="semester">
+      <option disabled selected value="NULL">Select Semester</option>
+      <option value="1">Fall 2021</option>
+      <option value="9">Spring 2022</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+  
+
+<table id="customers">
+  <tr>
+    <th>Course</th>
+    <th>Time</th>
+    <th>Days</th>
+    <th>Credits</th>
+    <th>Instructor</th>
+  </tr>
+
+  {{#each CNR}}
+  <tr>
+    <td>{{this.courseName}}</td>
+    <td>{{this.timeStart}} - {{this.timeEnd}}</td>
+    <td>{{this.timeDayOne}} - {{this.timeDayTwo}}</td>
+    <td>{{this.Credits}}</td>
+    <td>{{this.firstName}} {{this.lastName}}</td>
+  </tr>
+  {{/each}}
+
+</table>
+
+<script src="/script.js"></script>

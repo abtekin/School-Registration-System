@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/addStudent.css">
+
+<form class="form-card" method="post" action="/transcript">
+    <fieldset class="form-fieldset">
+        <legend class="form-legend">Generate Student Transcript</legend>
+        <div class="form-radio form-radio-inline">
+            <div class="form-checkbox form-checkbox-inline">
+    {{#if fac}}
+                <div class="form-element form-input">
+                    <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" "
+                        type="input" required name="uID" />
+                    <div class="form-element-bar"></div>
+                    <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Confirm ID</label>
+                </div>
+    {{/if}}
+
+    {{#if admin}}
+                <div class="form-element form-input">
+                    <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" "
+                        type="input" required name="uID" />
+                    <div class="form-element-bar"></div>
+                    <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Confirm ID</label>
+                </div>
+    {{/if}}
+
+    {{#if student}}
+        <h3>To view your transcript, simply click the submit button below.</h3>
+    {{/if}}
+            
+        </div>
+    </fieldset>
+    <div class="form-actions">
+        <button class="form-btn" type="submit">Submit</button>
+        <button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+    </div>
+</form>

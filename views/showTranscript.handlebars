@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/style.css">
+
+
+  
+<div class=playerDetailsPage>
+  <h1>Transcript </h1>
+  
+</div>
+
+<div class="playerDetailsPage">
+           <h2>{{s_name}} (ID:{{id}}) | GPA:{{gpaT}}</h2>
+    </div>
+
+<table id="customers">
+  <tr>
+    <th>Course name</th>
+    <th>Course ID</th>
+    <th>Semester</th>
+    <th>Grade</th>
+    <th>Credits</th>
+  </tr>
+{{#each classData}}
+<tr>
+    <td>{{this.c_name}}</td>
+    <td>{{this.c_id}}</td>
+    <td>{{this.semmy}}</td>
+    <td>{{this.grade}}</td>
+    <td>{{this.creds}}</td>
+</tr>
+{{/each}}

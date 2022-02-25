@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/addStudent.css">
+
+<form class="form-card" method="post" action="/editClass">
+    <fieldset class="form-fieldset">
+        <legend class="form-legend">Editing Course: {{c_id}} Section: {{sec_id}}</legend>
+        <div class="form-radio form-radio-inline">
+        <div class="form-checkbox form-checkbox-inline">  
+
+             <input type="hidden" id="custId" name="sec_id" value="{{sec_id}}">
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" value="{{c_id}}" type="input" required name="course_id"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Edit Course ID</label>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" value="{{fac_id}}" placeholder="" type="input" required name="fac_id"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Edit Instructor ID</label>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" value="{{room_id}}" type="input" required name="room_id"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Edit Room - Campus Center (1-55), CS (55-75), Education (75-100)</label>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" value="{{cap}}" type="input" required name="cap"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Edit Capacity</label>
+        </div>
+        
+    </fieldset>
+    <div class="form-actions">
+        <button class="form-btn" type="submit">Confirm Edit</button>
+        <button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+    </div>
+</form>

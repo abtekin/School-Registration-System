@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/style.css">
+
+<table id="customers">
+  
+<div>
+  <h1 id="h1o">Results for search</h1>
+</div>
+
+{{#if noResults}}
+    <h2>No Results</h2>
+{{else}}
+
+  <tr>
+    <th>User Name</th>
+    <th>ID</th>
+    <th>Email</th>
+    <th>Role</th>
+  </tr>
+{{#each userData}}
+<tr>
+    <td>{{this.name}}</td>
+    <td>{{this.id}}</td>
+    <td>{{this.email}}</td>
+    <td>{{this.role}}</td>
+</tr>
+{{/each}}
+{{/if}}

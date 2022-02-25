@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/style.css">
+
+
+  
+<div class=playerDetailsPage>
+  <h1>Faculty History for {{name}}</h1>
+  
+</div>
+
+<div class="playerDetailsPage">
+    </div>
+
+<table id="customers">
+  <tr>
+    <th>Course name</th>
+    <th>Course ID</th>
+    <th>Semester</th>
+  </tr>
+{{#each userData}}
+<tr>
+    <td>{{this.c_name}}</td>
+    <td>{{this.c_id}}</td>
+    <td>{{this.semmy}}</td>
+</tr>
+{{/each}}

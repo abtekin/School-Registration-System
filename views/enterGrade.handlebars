@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/addStudent.css">
+
+<form class="form-card" method="post" action="/setGrade">
+    <fieldset class="form-fieldset">
+        <legend class="form-legend">Enter A New Grade</legend>
+        <div class="form-radio form-radio-inline">
+            <div class="form-checkbox form-checkbox-inline">
+
+                <div class="form-element form-input">
+                    <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" "
+                        type="input" required name="uID" />
+                    <div class="form-element-bar"></div>
+                    <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Enter Students ID</label>
+                    <p>Please Enter the User's ID</p>
+                </div>
+
+                <div class="form-element form-input">
+                    <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" "
+                        type="input" required name="cID" />
+                    <div class="form-element-bar"></div>
+                    <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Enter Section ID</label>
+                    <p>Please Enter the section number</p>
+                </div>
+
+                <div class="form-element form-select">
+                    <select id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" "
+                        type="input" required name="grade">
+                        <option disabled selected value="NULL">Select a grade</option>
+                        <option value="A">A</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="B-">B-</option>
+                        <option value="C+">C+</option>
+                        <option value="C">C</option>
+                        <option value="C-">C-</option>
+                        <option value="D+">D+</option>
+                        <option value="D">D</option>
+                        <option value="D-">D-</option>
+                        <option value="F">F</option>
+                    </select>
+                <div class="form-element-bar"></div>
+
+    </fieldset>
+    <div class="form-actions">
+        <button class="form-btn" type="submit">Submit</button>
+        <button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+    </div>
+</form>

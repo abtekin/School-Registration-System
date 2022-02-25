@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/style.css">
+
+<table id="customers">
+  
+<div>
+  <h1 id="h1o">Viewing Advisee List: {{wholeName}}</h1>
+</div>
+
+  <tr>
+    <th>Student</th>
+    <th>ID Number</th>
+  </tr>
+{{#each userData}}
+<tr>
+    <td>{{this.name}}</td>
+    <td>{{this.idNum}}</td>
+</tr>
+{{/each}}

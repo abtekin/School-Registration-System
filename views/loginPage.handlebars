@@ -1,0 +1,23 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<html>
+	<head>
+		<link rel="stylesheet" href="/style.css">
+		<style>
+			body{
+				background:url('/login-background.jpg') no-repeat center center fixed;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+			}
+		</style>
+	</head>
+	<div class="login-page">
+	  <div class="form">
+		<form action="/login" method="POST" class="login-form">
+		  <input name="UN" id="userName" type="text" placeholder="User ID"/>
+		  <input name="PW" id="password" type="password" placeholder="Password"/>
+		  <button id="loginButtonsmol">login</button>
+		</form>
+	  </div>
+	</div>
+</html>

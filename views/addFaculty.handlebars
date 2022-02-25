@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="/addStudent.css">
+
+{{#if confirm}}
+<form action="/addFaculty/complete" method="get">
+ <input type="submit" onclick="return confirm('Are you sure?')" />
+ </form>
+{{/if}}
+
+
+<form class="form-card" method="post" action="/addFaculty">
+    <fieldset class="form-fieldset">
+        <legend class="form-legend">Register New Faculty Member</legend>
+        <div class="form-radio form-radio-inline">
+        <div class="form-checkbox form-checkbox-inline">
+
+        <div class="form-element form-select">
+            <select id="field-be1h8i-ll2hpg-q4efzm-nfjj1e-udkw5r" class="form-element-field" placeholder="Please create an Email" type="input" required name="time">
+                <option disabled selected value="NULL">Select Part/Full Time</option>
+                <option value="0">Part-Time</option>
+                <option value="1">Full-Time</option>
+            </select>
+            <div class="form-element-bar"></div>
+        </div>        
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" " type="input" required name="email"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Create an Email</label>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" " type="password" required name="password"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Create a Password</label>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" " type="input" required name="f_name"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Enter First Name</label>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" " type="input" required name="l_name"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Enter Last Name</label>
+        </div>        
+
+        <div class="form-element form-select">
+            <select id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder="Please select a Department" type="input" required name="department">
+                <option disabled selected value="NULL">Please select a Department</option> 
+                <option value="0">None</option>               
+                <option value="1">American Studies (1)</option>
+                <option value="2">Biological Sciences (2)</option>
+                <option value="3">Chemistry and Physics (3)</option>
+                <option value="4">English (4)</option>
+                <option value="5">History and Philosophy (5)</option>
+                <option value="6">Industrial and Labor Relations (6)</option>
+                <option value="7">Mathematics, Computer & Information Science (7)</option>
+                <option value="8">Media and Communications (8)</option>
+                <option value="9">Modern Languages (9)</option>
+                <option value="10">Politics, Economics and Law (10)</option>
+                <option value="11">Psychology (11)</option>
+                <option value="12">Public Health (12)</option>
+                <option value="13">Sociology (13)</option>
+                <option value="14">Visual Arts (14)</option>
+                <option value="15">Women and Gender Studies (15)</option>
+                <option value="16">Accounting, Taxation and Business Law (16)</option>
+                <option value="17">Management, Marketing and Finance (17)</option>
+                <option value="18">Education (18)</option>
+            </select>
+            <div class="form-element-bar"></div>
+        </div>
+
+    </fieldset>
+    <div class="form-actions">
+        <button class="form-btn" type="submit">Register Faculty</button>
+        <button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+    </div>
+</form>

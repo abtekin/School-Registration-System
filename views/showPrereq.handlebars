@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/style.css">
+
+<table id="customers">
+  
+<div>
+  <h1 id="h1o">Viewing Prerequisites for {{courseName}} ({{id}})</h1>
+</div>
+
+  <tr>
+    <th>Course ID</th>
+    <th>Course Name</th>
+  </tr>
+{{#each userData}}
+<tr>
+    <td>{{this.courseIDNum}}</td>
+    <td>{{this.courseName}}</td>
+</tr>
+{{/each}}

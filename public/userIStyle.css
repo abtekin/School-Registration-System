@@ -1,0 +1,97 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* =============================== */
+  /* ======= User Info Table ======= */
+  /* =============================== */
+
+  html{
+    background-color: #FFF;
+  }
+  
+  body {
+    background: #FFF;
+  }
+  
+  .account-info {
+    line-height: 1.7 !important;
+  }
+  
+  .user-details {
+    width: 100%;
+    position: relative;
+    padding: 0;
+  }
+  
+  .user-details .user-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .user-image img {
+    clear: both;
+    margin: auto;
+    position: relative;
+  }
+  
+  .user-details .user-info-block {
+    width: 100%;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    z-index: 0;
+  }
+  
+  .user-info-block .user-heading {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 0;
+  }
+  
+  .user-info-block .navigation {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    border-bottom: 10px solid #428BCA;
+    border-top: 10px solid #428BCA;
+    text-align: center;
+    text-align: center;
+  }
+  
+  .navigation li {
+    display: inline;
+  }
+  
+  .navigation li a {
+    padding: 20px 30px;
+    text-decoration: none;
+  }
+  
+  .navigation li.active a {
+    background: #428BCA;
+    color: #fff;
+  }
+  
+  .user-info-block .user-body {
+    float: left;
+    padding: 5%;
+    width: 100%;
+  }
+  
+  .user-body .tab-content > div {
+    float: left;
+    width: 100%;
+  }
+  
+  .user-body .tab-content h4 {
+    width: 100%;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  
+ 

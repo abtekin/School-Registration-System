@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/style.css">
+
+<table id="customers">
+  
+<div>
+  <h1 id="h1o">Viewing Programs for Student {{name}} (ID:{{id}})</h1>
+</div>
+
+  <tr>
+    <th>Program Name</th>
+    <th>Program ID </th>
+  </tr>
+{{#each userData}}
+<tr>
+    <td>{{this.majorName}}  {{this.gradName}}</td>
+    <td>{{this.majorIDNum}} {{this.gradIDNum}}</td>
+</tr>
+{{/each}}

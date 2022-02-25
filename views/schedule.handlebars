@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/style.css">
+
+<table id="customers">
+  
+<div>
+  <h1 id="h1o">Viewing schedule for {{name}}</h1>
+</div>
+
+  <tr>
+    <th>Course</th>
+    <th>Course ID</th>
+    <th>Section ID</th>
+    <th>Room Number</th>
+    <th>Building</th>
+    <th>Days</th>
+    <th>Time</th>
+  </tr>
+{{#each userData}}
+<tr>
+    <td>{{this.courseName}}</td>
+    <td>{{this.cID}}</td>
+    <td>{{this.sID}}</td>
+    <td>{{this.roomNum}}</td>
+    <td>{{this.building}}</td>
+    <td>{{this.days}}</td>
+    <td>{{this.time}}</td>
+</tr>
+{{/each}}

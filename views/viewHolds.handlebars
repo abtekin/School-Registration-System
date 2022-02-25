@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/style.css">
+
+<table id="customers">
+  
+<div>
+  <h1 id="h1o">Viewing holds for {{name}} (ID:{{id}})</h1>
+</div>
+
+  <tr>
+    <th>Student ID</th>
+    <th>Hold Type</th>
+  </tr>
+{{#each hv}}
+<tr>
+    <td>{{this.sID}}</td>
+    <td>{{this.type}}</td>
+</tr>
+{{/each}}

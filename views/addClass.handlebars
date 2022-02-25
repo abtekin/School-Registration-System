@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="/addStudent.css">
+<link rel="stylesheet" href="/classBackground.css">
+
+
+<form class="form-card" method="post" action="/addClass">
+    <fieldset class="form-fieldset">
+        <legend class="form-legend">Add a Class</legend>
+        <div class="form-radio form-radio-inline">
+        <div class="form-checkbox form-checkbox-inline">
+
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" " type="input" required name="c_id"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Enter Course ID</label>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" " type="input" required name="c_faculty"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Enter Faculty ID Teaching Course</label>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" " type="input" required name="c_room_id"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Enter Room ID</label>
+            <p>Campus Center (1-55), CS (55-75), Education (75-100)</p>
+        </div>
+
+        <div class="form-element form-select">
+            <select id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder="Please select a Major" type="input" required name="c_time_slot">
+                <option disabled selected value="NULL">Please select a Time Slot</option> 
+                <option value="1">Mon/Wed 8:00-9:30(1)</option>               
+                <option value="2">Mon/Wed 9:40-11:10(2)</option>
+                <option value="3">Mon/Wed 11:20-12:50(3)</option>
+                <option value="4">Mon/Wed 13:00-14:30(4)</option>
+                <option value="5">Mon/Wed 15:50-17:20(5)</option>
+                <option value="6">Mon/Wed 6:20-7:50(6)</option>
+                <option value="7">Tues/Thurs 8:00-9:30(7)</option>
+                <option value="8">Tues/Thurs 9:40-11:10(8)</option>
+                <option value="9">Tues/Thurs 11:20-12:50(9)</option>
+                <option value="10">Tues/Thurs 13:00-14:30(10)</option>
+                <option value="11">Tues/Thurs 15:50-17:20(11)</option>
+                <option value="12">Friday 9:40-11:10(12)</option>
+                <option value="13">Friday 11:20-12:50(13)</option>
+                <option value="14">Friday 13:00-14:30(14)</option>
+            </select>
+            <div class="form-element-bar"></div>
+        </div>
+
+        <div class="form-element form-input">
+            <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" " type="input" required name="c_capacity"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Enter Capacity</label>
+        </div>
+
+
+
+    </fieldset>
+    <div class="form-actions">
+        <button class="form-btn" type="submit">Submit Class</button>
+        <button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+    </div>
+</form>

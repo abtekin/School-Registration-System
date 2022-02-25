@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/style.css">
+
+<table id="customers">
+
+  <div>
+    <h1 id="h1o">Viewing Courses Neccesary For Major Program: {{programName}}</h1>
+  </div>
+
+  <tr>
+    <th>Course ID</th>
+    <th>Neccesary Courses</th>
+  </tr>
+  {{#each userData}}
+  <tr>
+ <td>{{this.courseID}}</td>
+    <td>{{this.courseName}} </td>
+
+  </tr>
+  {{/each}}

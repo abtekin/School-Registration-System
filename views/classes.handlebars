@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/ILstyle.css">
+
+
+
+
+  
+<div>
+  <h1 id="h1o">Viewing Courses Offered Spring 2022</h1>
+</div>
+
+<form class="form-inline" action="/viewClasses" method="post">
+    <select placeholder=" " type="input"
+      required name="sortBy">
+      <option disabled selected value="NULL">Sort By</option>
+      <option value="1">Course</option>
+      <option value="2">Time</option>
+      <option value="3">Credits</option>
+      <option value="4">Inscructor</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+<table id="customers">
+
+  <tr>
+    <th>Course</th>
+    <th>Course ID</th>
+    <th>Section ID</th>
+    <th>Instructor</th>
+    <th>Credits</th>
+    <th>Available Seats</th>
+    <th>Day</th>
+    <th>Time</th>
+    <th>Building</th>
+    <th>Room</th>
+  </tr>
+{{#each userData}}
+<tr>
+    <td>{{this.className}}</td>
+    <td>{{this.course_id}}</td>
+    <td>{{this.secID}}</td>
+    <td>{{this.name}}</td>
+    <td>{{this.credits}}</td>
+    <td>{{this.seats}}</td>
+    <td>{{this.day}}</td>
+    <td>{{this.time}}</td>
+    <td>{{this.building}}</td>
+    <td>{{this.room}}</td>
+</tr>
+{{/each}}

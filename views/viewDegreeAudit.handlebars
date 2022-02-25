@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/styyy.css">
+
+
+<table id="customers">
+  
+<div class="playerDetailsPage">
+  <h1 id="h1o">Degree Evaluation</h1>
+  <h3 id="h1o"><b>Name:</b> {{sName}} (ID:{{id}}) <b>|</b> <b>Credits:</b> {{credits}} / 120 <b>|</b> <b>Major:</b> {{maj}} <b>|</b> <b>Minor:</b> {{min}} <b>| Class Level:</b> {{class}}</h3>
+</div>
+
+  <tr>
+    <th>Class Name</th>
+    <th>Course ID</th>
+    <th>Credits</th>
+    <th>Completed / In Progress</th>
+  </tr>
+{{#each taken}}
+<tr id="yesss">
+    <td>{{this.c_name}}</td>
+    <td>{{this.c_id}}</td>
+    <td>{{this.credits}}</td>
+    <td>YES</td>
+</tr>
+{{/each}}
+
+{{#each needed}}
+<tr id="nope">
+    <td>{{this.c_name}}</td>
+    <td>{{this.c_id}}</td>
+    <td>{{this.credits}}</td>
+    <td>NO</td>
+</tr>
+{{/each}}

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/style.css">
+
+<table id="customers">
+  
+<div>
+  <h1 id="h1o">Viewing {{name}}'s Students For Fall 2021</h1>
+</div>
+
+  <tr>
+    <th>Course Name</th>
+    <th>Course ID</th>
+    <th>Section ID</th>
+    <th>Student Name</th>
+    <th>Student ID</th>
+    <th>Current Grade</th>
+    <th>Student Email</th>
+  </tr>
+{{#each info}}
+<tr>
+    <td>{{this.c_name}}</td>
+    <td>{{this.c_id}}</td>
+    <td>{{this.sec_id}}</td>
+    <td>{{this.s_name}}</td>
+    <td>{{this.student_id}}</td>
+    <td>{{this.grade}}</td>
+    <td>{{this.mail}}</td>
+</tr>
+{{/each}}

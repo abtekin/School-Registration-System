@@ -1,0 +1,90 @@
+/*
+    colors used
+    #D69314	(214,147,20)
+    #ffffff	(255,255,255)
+*/
+
+body {
+  font-size: 1.2rem;
+}
+
+hr {
+  width: 60px;
+}
+
+.photo-info {
+  opacity: 0.8;
+}
+
+.caption {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.blue-color {
+  color: #1482d6 !important;
+}
+
+.white-color {
+  color: #ffffff !important;
+}
+
+
+.background-black {
+  background-color: #000;
+}
+
+.large-text {
+  font-size: 3rem;
+}
+
+.card {
+  width: 20rem;
+}
+
+.icon-circle {
+  padding-top: 7px;
+  min-width: 90px;
+  min-height: 90px;
+  max-width: 90px;
+  max-height: 90px;
+  background: #1472d6;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+#main-photo {
+  background: url("https://www.iii.org/sites/default/files/p_collegecampus_522307288.jpg");
+  background-size: cover;
+  background-position: center center;
+  min-height: 720px;
+}
+
+#how-we-teach-header {
+  background-size: 100%;
+  min-height: 200px;
+  background: url("https://www.cbeinternational.org/sites/default/files/styles/article_image/public/2019-12/itsnoteasybeinga1200_0.jpg?itok=ROKXyObS");
+
+  background-position: 0 -300px;
+  text-align: center;
+  color: #fff;
+}
+
+#we-teach {
+  text-align: left;
+}
+
+form{
+  margin-left: 25;
+  margin-right: 25;
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .caption {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

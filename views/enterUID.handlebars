@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/addStudent.css">
+
+<form class="form-card" method="post" action="/viewSchedule">
+    <fieldset class="form-fieldset">
+        <legend class="form-legend">Schedule Viewer</legend>
+        <div class="form-radio form-radio-inline">
+            <div class="form-checkbox form-checkbox-inline">
+{{#if fac}}
+                <div class="form-element form-input">
+                    <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" "
+                        type="input" required name="uID" />
+                    <div class="form-element-bar"></div>
+                    <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Confirm ID</label>
+                </div>
+
+            
+                <div class="form-element form-select">
+                    <select id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" "
+                        type="input" required name="role">
+                        <option disabled selected value="NULL">Please select user type</option>
+                        <option value="1">Student</option>
+                        <option value="2">Faculty</option>
+                    </select>
+                <div class="form-element-bar"></div>
+    {{/if}}
+
+    {{#if admin}}
+                <div class="form-element form-input">
+                    <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" "
+                        type="input" required name="uID" />
+                    <div class="form-element-bar"></div>
+                    <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Confirm ID</label>
+                </div>
+
+            
+                <div class="form-element form-select">
+                    <select id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" "
+                        type="input" required name="role">
+                        <option disabled selected value="NULL">Please select user type</option>
+                        <option value="1">Student</option>
+                        <option value="2">Faculty</option>
+                    </select>
+                <div class="form-element-bar"></div>
+    {{/if}}
+
+
+                <div class="form-element form-select">
+                    <select id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder=" "
+                        type="input" required name="semester">
+                        <option disabled selected value="NULL">Please select semester to view</option>
+                        <option value="1">Current - Fall 2021</option>
+                        <option value="9">Next - Spring 2022</option>
+                    </select>
+                <div class="form-element-bar"></div>
+            
+        </div>
+    </fieldset>
+    <div class="form-actions">
+        <button class="form-btn" type="submit">Submit</button>
+        <button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+    </div>
+</form>
